@@ -1,0 +1,25 @@
+<!--
+Prog No:8
+Prog Name:Copy a given string to clipboard
+Date:4/12/2020
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment8</title>
+	</head>
+	<body style = "text-align:left;">
+		<h1 style = "color:green;" >Copy a string in clipboard</h1>
+		<input type="text" value="copy me in clipboard" id="input">
+		<button onclick="copyTextClipboard()">Copy text</button>
+		<script language="javascript" text="text/javascript">
+			function copyTextClipboard() 
+			{
+				var copyText = document.getElementById("input");
+				copyText.select();
+				document.execCommand("copy");
+				alert("Text copied is: " + copyText.value);
+			}
+		</script>
+	</body>
+</html>
